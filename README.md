@@ -1,7 +1,7 @@
 # react-native-reactive
 React Native Reactive Model-View using react-native-router-flux and Reactive Programming
 
-# What is it?
+## What is it?
 It is alternative to Redux. Redux is great, but you have to code a lot of boilerplate to use it:
   1. create string actions constants for each action
   2. build bulky switch statements within your reducers
@@ -22,6 +22,9 @@ and Obserables (that observe your Atom(s)) are replacements of reducers.
 It wraps each component Scene with special wrapper that replaces all observables to their actual values. Once any passed observable changes,
 the component will be re-rendered with new values. Note that you could pass only needed sub-state of your Atom(s) using [Partial Lenses](https://github.com/calmm-js/partial.lenses)
 to avoid needless re-rendering of the components.
+
+## How to use it?
+This component is just thin wrapper around react-native-router-flux (RNRF), so just import it instead of RNRF.
 
 Example of reactive model counter:
 
