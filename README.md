@@ -23,5 +23,83 @@ It wraps each component Scene with special wrapper that replaces all observables
 the component will be re-rendered with new values. Note that you could pass only needed sub-state of your Atom(s) using [Partial Lenses](https://github.com/calmm-js/partial.lenses)
 to avoid needless re-rendering of the components.
 
-Example of reactive model counter (without usage of React Native Router Flux yet):
-https://github.com/aksonov/react-native-reactive-counter-example
+Example of reactive model counter:
+
+Example.js:
+```jsx
+import React from 'react';
+import {Router, Scene} from 'react-native-reactive';
+
+// view and model for Counter scene
+import Counter from './components/Counter';
+import {increase, decrease, counter, total} from './model/counter';
+
+export default () =>
+  <Router>
+    <Scene key="launch" component={Counter} hideNavBar {...{increase, decrease, counter, total}}/>
+  </Router>
+```
+
+counter.js (reactive model)
+```jsx
+import Atom from 'kefir.atom';
+
+// our simplest store ever - counter
+export const counter = Atom(0).log("counter");
+
+export function increase(){
+  counter.modify(x=>x+1);
+}
+
+export function decrease(){
+  counter.modify(x=>x-1);
+}
+
+// example of 'computed' value = number of total operations
+export const total = counter.scan((prev, next) => prev + 1, -1);
+```
+
+Counter.js (view)
+```jsx
+import React from 'react';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  StyleSheet
+} from 'react-native';
+import Button from 'react-native-button';
+
+const Counter = (model) =>
+  <View style={styles.container}>
+    <Text style={styles.welcome}>
+      Welcome to React Native Reactive!
+    </Text>
+    <Text>Counter: {model.counter}</Text>
+    <Text>Total clicks: {model.total}</Text>
+    <Button onPress={model.increase}>+</Button>
+    <Button onPress={model.decrease}>-</Button>
+  </View>
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
+  },
+  welcome: {
+    fontSize: 20,
+    textAlign: 'center',
+    margin: 10,
+  },
+  instructions: {
+    textAlign: 'center',
+    color: '#333333',
+    marginBottom: 5,
+  },
+});
+
+export default Counter;
+
+```

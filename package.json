@@ -1,0 +1,38 @@
+{
+  "name": "react-native-reactive",
+  "version": "0.0.1",
+  "description": "React Native Reactive Model-View architecture",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aksonov/react-native-reactive.git"
+  },
+  "keywords": [
+    "react-native",
+    "reactivity",
+    "kefir",
+    "calmm-js",
+    "reactive"
+  ],
+  "author": "Pavlo Aksonov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aksonov/react-native-reactive/issues"
+  },
+  "dependencies": {
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-es2015-loose-rollup": "^7.0.0",
+    "babel-preset-react-native-stage-0": "^1.0.1",
+    "babel-preset-stage-2": "^6.5.0",
+    "kefir": "^3.2.2",
+    "kefir.atom": "^2.2.1",
+    "kefir.react.native": "^0.1.0",
+    "partial.lenses": "^3.4.1",
+    "ramda": "^0.21.0",
+    "react-native-router-flux": "^3.26.1"
+  },
+  "homepage": "https://github.com/aksonov/react-native-reactive#readme"
+}
