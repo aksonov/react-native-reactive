@@ -13,7 +13,7 @@ and mostly based on [Calmm-JS](https://github.com/calmm-js/documentation/blob/ma
 
 [Introduction to Reactive Programming](https://gist.github.com/staltz/868e7e9bc2a7b8c1f754)
 
-Instead of creation of reducers/actions you have to create Reactive Model, aka "Reactive State" using supported reactive library (KefirJS/Bacon).
+Instead of creation of reducers/actions you have to create Reactive Model, aka "Reactive State" using supported reactive library ([Kefir](https://github.com/rpominov/kefir)/[Bacon](https://baconjs.github.io)).
 Everything could be represented as event stream or Observables. To represent your store [Calmm-JS](https://github.com/calmm-js/documentation/blob/master/introduction-to-calmm.md) introduces Atom, 
 Observable 'property' which easily could be set/get from your React Components. You could consider Atom as replacement of your Redux Store
 and Obserables (that observe your Atom(s)) are replacements of reducers. 
