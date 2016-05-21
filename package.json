@@ -1,6 +1,6 @@
 {
   "name": "react-native-reactive",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "React Native Reactive Model-View architecture",
   "main": "index.js",
   "scripts": {
@@ -12,8 +12,12 @@
   },
   "keywords": [
     "react-native",
+    "reactive",
     "reactivity",
+    "react-components",
+    "react-component",
     "kefir",
+    "kefirjs",
     "calmm-js",
     "reactive"
   ],
