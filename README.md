@@ -27,6 +27,7 @@ to avoid needless re-rendering of the components.
 This component is just thin wrapper around react-native-router-flux (RNRF), so just import it instead of RNRF.
 
 Example of reactive model counter:
+
 ![demo](https://cloud.githubusercontent.com/assets/1321329/15446716/b4639f86-1f29-11e6-960d-5ba0c6f8fc47.gif)
 
 Example.js:
