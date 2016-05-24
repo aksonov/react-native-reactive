@@ -1,6 +1,6 @@
 {
   "name": "react-native-reactive",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "React Native Reactive Model-View architecture",
   "main": "index.js",
   "scripts": {
@@ -36,7 +36,7 @@
     "kefir.react.native": "^0.1.0",
     "partial.lenses": "^3.4.1",
     "ramda": "^0.21.0",
-    "react-native-router-flux": "^3.26.1"
+    "react-native-router-flux": "^3.26.2"
   },
   "homepage": "https://github.com/aksonov/react-native-reactive#readme"
 }
