@@ -1,5 +1,5 @@
 # react-native-reactive
-React Native Reactive Model-View using react-native-router-flux and Reactive Programming
+React Native Reactive Model-View using react-native-router-flux and Reactive Programming.
 
 ## What is it?
 It is alternative to Redux. Redux is great, but you have to code a lot of boilerplate to use it:
@@ -10,6 +10,8 @@ It is alternative to Redux. Redux is great, but you have to code a lot of boiler
 
 Reactive Model-View is similar to [Model-View-Intent from Cycle.JS](http://cycle.js.org/model-view-intent.html) or [MVC-Reactivated](http://kumarishan.in/clientside-mvc-reactivated)
 and mostly based on [Calmm-JS](https://github.com/calmm-js/documentation/blob/master/introduction-to-calmm.md), [slides](http://calmm-js.github.io/documentation/training/#/).
+
+Another component with similar concept - [React Native MobX](https://github.com/aksonov/react-native-mobx)
 
 [Introduction to Reactive Programming](https://gist.github.com/staltz/868e7e9bc2a7b8c1f754)
 
